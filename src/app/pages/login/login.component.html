@@ -1,0 +1,25 @@
+<body>
+  <div class="hero">
+    <div class="card" style="width: 18rem;">
+      
+        <div class="card-body">
+          <h5 class="card-title">{{'title3'|translate}}</h5>
+          
+          <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]="loginModel.username" class="form-control" id="lusername">
+            <label for="lusername"><i class="bi bi-person-circle"></i>{{'usernamePlaceholder'|translate}}</label>
+          </div>   
+          <div class="form-floating">
+            <input [(ngModel)]="loginModel.password" type="password" class="form-control" id="lpassword" placeholder="Password">
+            <label for="lpassword"><i class="bi bi-person-lock"></i>{{'passwordPlaceholder'|translate}}</label>
+          </div>
+          <p >
+          <a href="register">{{'registrationLink'|translate}}<i class="bi bi-arrow-right"></i></a>
+            
+          </p>
+          <button (click)="login()" type="button" class="btn btn-secondary">{{'loginButton'|translate}}</button>
+     
+        </div>
+      </div>
+    </div>
+</body>

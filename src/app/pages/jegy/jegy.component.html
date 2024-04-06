@@ -1,0 +1,24 @@
+<div class="hero">
+  <h1>{{'selectServicesTitle'|translate}}</h1>
+  <div id="jegyek" class="menu-item">
+    <a href="ticket" class="btn btn-outline-warning" (click)="openSpinner()">{{'tickets'|translate}}</a>
+  </div>
+  <div id="kiegeszitok" class="menu-item">
+    <a href="additional" class="btn btn-outline-warning" (click)="openSpinner()">{{'additional'|translate}}</a>
+  </div>
+  <div id="horgaszboltok" class="menu-item">
+    <a href="fishing-shop" class="btn btn-outline-warning" (click)="openSpinner()">{{'fishingShops'|translate}}</a>
+  </div>
+  <div id="halfajok" class="menu-item2">
+    <a href="fish" class="btn btn-outline-warning" (click)="openSpinner()">{{'fishSpecies'|translate}}</a>
+  </div>
+  <div id="esemenyek" class="menu-item2">
+    <a href="events" class="btn btn-outline-warning" (click)="openSpinner()">{{'events'|translate}}</a>
+  </div>
+  <div id="versenyek" class="menu-item2">
+    <a href="versenyek" class="btn btn-outline-warning" (click)="openSpinner()">{{'competitions'|translate}}</a>
+  </div>
+</div>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">{{'loadingSpinnerText'|translate}}.</p>
+</ngx-spinner>

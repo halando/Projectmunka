@@ -9,10 +9,16 @@ import { AuthService } from '../../auth.service';
 })
 export class RegisterComponent {
   regModel:any={}
+  visible:boolean=true;
+  changetype:boolean=true;
   
   constructor(private auth:AuthService){}
   register(){
    
      this.auth.register(this.regModel)
+   }
+   viewpass(){
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
    }
 }

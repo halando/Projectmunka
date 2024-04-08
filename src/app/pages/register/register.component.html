@@ -31,6 +31,7 @@
         <div class="form-floating">
           <input [(ngModel)]="regModel.password" type="password" class="form-control" id="password" placeholder="Password">
           <label for="password">{{'passwordPlaceholder2'|translate}}</label>
+          <span class="eyeicon" (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye':'bi bi-eye-slash'" style="font-size: 3em;"></i></span>
         </div>
         <button (click)="register()" type="button" class="btn btn-primary">{{'register2' |translate}}</button>
       </div>

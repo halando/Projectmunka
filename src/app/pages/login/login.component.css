@@ -24,4 +24,25 @@ button{
 h5{
     text-align: center;
     font-weight: bold;
+    font-size: 20px;
+}
+.eyeicon{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+.form-floating{
+    font-weight: bold;
+}
+.fw-bold{
+    font-weight: bold;
+}
+a{
+    background-color: gray;
+    color: whitesmoke;
+    border: 5px solid black;
+    overflow: hidden;
+    border-radius: 20px;
+    font-weight: bold;
 }

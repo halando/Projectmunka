@@ -9,6 +9,8 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class LoginComponent {
   loginModel:any={}
+  visible:boolean=true;
+  changetype:boolean=true;
 
   constructor(private auth:AuthService,private spinner:NgxSpinnerService){}
   
@@ -21,4 +23,8 @@ export class LoginComponent {
       this.spinner.hide();
     },5000)
   }
+  viewpass(){
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
+   }
 }

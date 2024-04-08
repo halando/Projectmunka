@@ -7,11 +7,12 @@
           
           <div class="form-floating mb-3">
             <input type="text" [(ngModel)]="loginModel.username" class="form-control" id="lusername">
-            <label for="lusername"><i class="bi bi-person-circle"></i>{{'usernamePlaceholder'|translate}}</label>
+            <label for="lusername"><i class="bi bi-person-circle" style="font-size: 25px;"></i>{{'usernamePlaceholder'|translate}}</label>
           </div>   
           <div class="form-floating">
             <input [(ngModel)]="loginModel.password" type="password" class="form-control" id="lpassword" placeholder="Password">
-            <label for="lpassword"><i class="bi bi-person-lock"></i>{{'passwordPlaceholder'|translate}}</label>
+            <label for="lpassword"><i class="bi bi-person-lock" style="font-size: 25px;"></i>{{'passwordPlaceholder'|translate}}</label>
+            <span class="eyeicon" (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye':'bi bi-eye-slash'" style="font-size: 3em;"></i></span>
           </div>
           <p >
           <a href="register">{{'registrationLink'|translate}}<i class="bi bi-arrow-right"></i></a>

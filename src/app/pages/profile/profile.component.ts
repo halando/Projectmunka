@@ -14,7 +14,8 @@ export class ProfileComponent {
   currentUser:any={}
   newPassword1:any
   newPassword2:any
-  
+  visible:boolean=true;
+  changetype:boolean=true;
 
   constructor(private auth:AuthService, private aroute: ActivatedRoute, private router:Router){
  
@@ -105,4 +106,8 @@ export class ProfileComponent {
     
   
 }
+viewpass(){
+  this.visible = !this.visible;
+  this.changetype = !this.changetype;
+ }
 }

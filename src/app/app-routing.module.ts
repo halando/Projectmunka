@@ -22,8 +22,8 @@ import { ErrorComponent } from './pages/error/error.component';
 
 
 const routes: Routes = [
-  {path:'login', component:LoginComponent},
-  {path:'', component:KezdolapComponent},
+  {path:'', component:LoginComponent},
+  {path:'kezdolap', component:KezdolapComponent},
   {path:'fooldal', component:FooldalComponent},
   {path:'jegy', component:JegyComponent},
   {path:'kornyezetvedelem', component:KornyezetvedelemComponent},

@@ -32,7 +32,7 @@ ngOnInit(): void {
 
   logout(){
     this.auth.logout()
-    this.router.navigate(['/signin'])
+    this.router.navigate([''])
   }
   ChangeLanguage(lang:any){
     const selectedLanguage = lang.target.value;

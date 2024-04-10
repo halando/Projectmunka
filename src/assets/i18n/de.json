@@ -243,5 +243,11 @@
     ,
     
 
-    "buttonText8": "Weitere Tickets"
+    "buttonText8": "Weitere Tickets",
+    "deletebutton":"Streichung",
+    "profilebutton":"Profil",
+
+    "title11":"Falls Sie noch nicht registriert sind?",
+    "title12":"Falls schon vorhanden",
+    "click":"klicken Sie hier"
 }

@@ -30,3 +30,29 @@
     background-color: var(--primary-color);
     color: #fff;
 }
+.content2{
+    position: absolute;
+    top:60%;
+    left: 20%;
+}
+.content2 h1{
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+   
+   
+   
+}
+.content2 a{
+    text-decoration: none;
+    background-color: #fff;
+    color:var(--primary-color);
+    padding: 15px 20px;
+    border-radius: 5px;
+  
+}
+
+.content2 a:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}

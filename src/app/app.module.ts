@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule,HttpClient  } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './sharepage/navbar/navbar.component';
 import { FooterComponent } from './sharepage/footer/footer.component';
 import { KezdolapComponent } from './pages/kezdolap/kezdolap.component';
+import { FooldalComponent } from './pages/fooldal/fooldal.component';
 import { JegyComponent } from './pages/jegy/jegy.component';
 import { KapcsolatComponent } from './pages/kapcsolat/kapcsolat.component';
 import { KornyezetvedelemComponent } from './pages/kornyezetvedelem/kornyezetvedelem.component';
@@ -37,6 +39,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { ErrorComponent } from './pages/error/error.component';
 
 
+
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -60,7 +64,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdditionalComponent,
     EventsComponent,
     VersenyekComponent,
-    ErrorComponent
+    FooldalComponent,
+    ErrorComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -83,7 +89,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
     BrowserAnimationsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ToastrModule.forRoot(),
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

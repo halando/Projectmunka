@@ -59,5 +59,9 @@ export class UserListComponent {
   profile(id:any){
     this.router.navigate(['/profile/'+id])
   }
-
+  delete(user:any){
+    this.auth.delete(user).subscribe(
+      ()=>console.log("Sikeres törlés")
+    )
+  }
 }

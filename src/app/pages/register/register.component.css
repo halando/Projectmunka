@@ -33,3 +33,6 @@ h5{
     top: 10px;
     cursor: pointer;
 }
+.form-floating{
+    font-weight: bold;
+}

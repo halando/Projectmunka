@@ -244,6 +244,13 @@
 
        
     
-    "buttonText8": "További jegyek"
+    "buttonText8": "További jegyek",
+    "deletebutton":"Törlés",
+    "profilebutton":"Profil",
+
+    "title11":"Ha még nincs regisztrációd?",
+    "title12":"Ha már van",
+    "click":"Kattints ide"
+   
 }
 

@@ -68,6 +68,16 @@ export class AuthService {
     
     
   }
+  delete(user:any){
+    console.log("delete",user)
+     let head:any ={
+       headers: new HttpHeaders().set("Authorization","Bearer "+this.token),
+       'responseType':'text'
+     }
+     return this.http.delete("https://localhost:5001/api/user/"+user.id, head)
+     
+     
+   }
   changePassword(newPassword:any){
     let head:any ={
       headers: new HttpHeaders({"Authorization":"Bearer "+this.token}),  

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { KezdolapComponent } from './pages/kezdolap/kezdolap.component';
+import { FooldalComponent } from './pages/fooldal/fooldal.component';
 import { JegyComponent } from './pages/jegy/jegy.component';
 import { KornyezetvedelemComponent } from './pages/kornyezetvedelem/kornyezetvedelem.component';
 import { KapcsolatComponent } from './pages/kapcsolat/kapcsolat.component';
@@ -19,9 +20,11 @@ import { AdditionalComponent } from './additional-pages/additional/additional.co
 import { ErrorComponent } from './pages/error/error.component';
 
 
+
 const routes: Routes = [
-  {path:'', component:LoginComponent},
-  {path:'kezdolap', component:KezdolapComponent},
+  {path:'login', component:LoginComponent},
+  {path:'', component:KezdolapComponent},
+  {path:'fooldal', component:FooldalComponent},
   {path:'jegy', component:JegyComponent},
   {path:'kornyezetvedelem', component:KornyezetvedelemComponent},
   {path:'kapcsolat', component:KapcsolatComponent},

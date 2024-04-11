@@ -18,14 +18,14 @@ export class LoginComponent {
   
   login(){
       this.auth.login(this.loginModel)
-      this.toastr.success('Üdvözlünk az oldalunkon!')
+      this.toastr.success('Sikeres Bejelentkezés!')
       this.router.navigate(['fooldal']);
   }
   openSpinner(){
     this.spinner.show();
     setTimeout(()=>{
       this.spinner.hide();
-    },5000)
+    },3500)
   }
   viewpass(){
     this.visible = !this.visible;

@@ -1,27 +1,28 @@
-# Mhei2
+# Mhei 2023.12.10
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+Fejlesztők:Fekete Gergely(Frontend),Róth József(Asztali/electron),Andó Attila(Backend).
 
-## Development server
+A Projekt célja: hogy az emberekkel jobban megismertessük a horgászat szépségeit és fontosságát.Létrehoztunk egy alkalmazást amiben a felhasználó tud tájékózodni a jelenlegi határozatokról,napijegyekről,versenyekről és egyéb horgászattal kapcsolatos témákról.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Felhasznált technológiák: Angular,Ngx,Electron,Bootstrap,C#
 
-## Code scaffolding
+Frontend start:
+    -cd "mappa",
+    -npm install,
+    -ng serve -o
+    
+Backend start: (Ne felejtsük el ha elakarjuk indítani háttértárolást, ahhoz kell egy backendapi is amit ezen a linken tudtok elérni)->https://github.com/halando/MheiBackendApi   
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Electron:  Megvalósítottuk a célt, hogy meglévő Angular projektünket Electron asztali alkalmazássá alakítsuk át. Ezt a törekvést az a vágy motiválta, hogy kiterjesszük alkalmazásunk hatókörét az asztali felhasználókra, miközben kihasználjuk a megszokott webes fejlesztési stacket.
 
-## Build
+Electron start:npm init -y,          
+npm install electron --save-dev,         
+npm run build,           
+npm start,               
+npm run electron
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+Felhasznált képek,források a projekt dokumentációjában található.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Frontend port: 4200,           
+Backend port: 5001

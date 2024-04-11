@@ -32,6 +32,6 @@ export class TicketComponent {
     this.spinner.show();
     setTimeout(()=>{
       this.spinner.hide();
-    }, 15000)
+    }, 3500)
   }
 }

@@ -1,6 +1,6 @@
 # Mhei 2023.12.10
 
-Fejlesztők:Fekete Gergely(Frontend),Róth József(Asztali/electron),Andó Attila(Backend).
+Fejlesztők: Fekete Gergely (Frontend), Róth József (Asztali/electron) , Andó Attila (Backend).
 
 A Projekt célja: hogy az emberekkel jobban megismertessük a horgászat szépségeit és fontosságát.Létrehoztunk egy alkalmazást amiben a felhasználó tud tájékózodni a jelenlegi határozatokról,napijegyekről,versenyekről és egyéb horgászattal kapcsolatos témákról.
 

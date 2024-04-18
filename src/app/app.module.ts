@@ -28,6 +28,8 @@ import { AdditionalComponent } from './additional-pages/additional/additional.co
 import { EventsComponent } from './additional-pages/events/events.component';
 import { VersenyekComponent } from './additional-pages/versenyek/versenyek.component';
 
+import { AddEventComponent } from './add-event/add-event.component';
+import { NewEventComponent } from './new-event/new-event.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -37,6 +39,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ErrorComponent } from './pages/error/error.component';
+
 
 
 
@@ -65,7 +68,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     EventsComponent,
     VersenyekComponent,
     FooldalComponent,
+    AddEventComponent,
+    NewEventComponent,
     ErrorComponent,
+    
     
   ],
   imports: [

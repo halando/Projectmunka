@@ -250,5 +250,13 @@
     "title11":"Falls Sie noch nicht registriert sind?",
     "title12":"Falls schon vorhanden",
     "click":"klicken Sie hier",
-    "title13":"Willkommen auf unserer Webseite"
+    "title13":"Willkommen auf unserer Webseite",
+
+    "newevents":"Neue Veranstaltungen",
+    "event2": "Veranstaltungen",
+    "Deletebutton": "Streichung",
+    "Updatebutton":"Aktualisieren",
+    "Addbutton": "Zusatz",
+    "Newevent":"Neues Event",
+    "Event":"Veranstaltungen"
 }

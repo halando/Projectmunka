@@ -252,5 +252,14 @@
     "title12":"If you already have",
     "click":"Click here",
 
-    "title13":"Welcome to our site"
+    "title13":"Welcome to our site",
+
+
+    "newevents":"New  Events",
+    "event2": "Events",
+    "Deletebutton": "Delete",
+    "Updatebutton":"Update",
+    "Addbutton": "Add",
+    "Newevent": "New event",
+    "Event":"Events"
 }

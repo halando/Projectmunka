@@ -251,7 +251,15 @@
     "title11":"Ha még nincs regisztrációd?",
     "title12":"Ha már van",
     "click":"Kattints ide",
-    "title13":"Üdvözlünk az oldalunkon"
+    "title13":"Üdvözlünk az oldalunkon",
+
+    "newevents":"Új Események",
+    "event2": "Események",
+    "Deletebutton": "Törlés",
+    "Updatebutton":"Frissítés",
+    "Addbutton": "Hozzáadás",
+    "Newevent": "Új esemény",
+    "Event":"Események"
    
 }
 

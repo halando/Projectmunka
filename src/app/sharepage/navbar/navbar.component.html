@@ -1,9 +1,14 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink=""><i class="bi bi-sina-weibo"></i>{{'navbarBrand'| translate}}</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="navbar navbar-expand-lg  bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/img/navbar/logo.png" alt="Logo" width="30" height="24"
+        class="rounded-circle d-inline-block align-text-top">
+      MHEI
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
@@ -26,6 +31,12 @@
           </li>
           <li  class="nav-item">
             <a class="nav-link"routerLink="user-list" routerLinkActive="active-link">{{'users'|translate}}</a>
+          </li>
+          <li  class="nav-item">
+            <a class="nav-link" routerLink="/events">{{'event2' |translate}}</a>
+          </li>
+          <li *ngIf="currentUser" class="nav-item">
+            <a class="nav-link" routerLink="/newevent">{{'newevents' |translate}}</a>
           </li>
           <li *ngIf="currentUser" class="nav-item">
             <a class="nav-link" (click)="logout()">{{'logout' |translate}}</a>

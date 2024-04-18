@@ -1,0 +1,16 @@
+<div class="hero">
+    <div class="card" style="width: 18rem;">
+      <img src="../../assets/img/versenyek/sunset6.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{'Newevent'|translate}}</h5>
+  
+        <div *ngFor="let o of oszlopok" class="form-floating mb-3">
+          <input [(ngModel)]="newEvent[o]" type="text" class="form-control" [id]="o">
+          <label [for]="o">{{o}}</label>
+        </div>
+        
+       
+        <button (click)="addEvent()" type="button" class="btn btn-primary">{{'Addbutton'|translate}}</button>
+      </div>
+    </div>
+  </div>

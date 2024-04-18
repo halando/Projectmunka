@@ -10,6 +10,7 @@ export class AuthService {
   url="https://localhost:5001/api/"
   private token=""
   private user:any={}
+  private event:any={}
   private userSub= new BehaviorSubject(null)
   public SadminSub= new BehaviorSubject<boolean>(false)
 
@@ -78,6 +79,72 @@ export class AuthService {
      
      
    }
+
+   eventdelete(event: any) {
+    console.log("delete", event);
+    const head:any = {
+      headers: new HttpHeaders().set("Authorization","Bearer "+this.token)  
+      
+    };
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+  
+    return this.http.delete(`https://localhost:5001/api/Events/`+event.id, { headers });
+  
+  }
+  
+  getEvents() {
+   
+    const head:any = {
+      headers: new HttpHeaders().set("Authorization","Bearer "+this.token),   
+      
+    };
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+  
+    return this.http.get(`https://localhost:5001/api/Events`, { headers });
+  }
+  
+  getEvent(id:any) {
+   
+    const head:any = {
+      headers: new HttpHeaders().set("Authorization","Bearer "+this.token),   
+      
+    };
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+  
+    return this.http.get(`https://localhost:5001/api/Events/`+id, { headers });
+  }
+  putEvent(event:any) {
+   
+    const head:any = {
+      headers: new HttpHeaders().set("Authorization","Bearer "+this.token),   
+      
+    };
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+    console.log("Put: ", event)
+    return this.http.put(`https://localhost:5001/api/Events/`+event.id,event, { headers });
+  }
+  
+  
+  
+  eventadd(event: any){
+    console.log("add", event);
+    // const body = {
+    //   id: event.id,
+    //   userId: event.userId,
+    //   name: event.name,
+    //   description: event.description,
+    //   imagePath: null, 
+    //   link: event.link
+      
+    // };
+    event.userId = this.user.id          
+  
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+    return this.http.post("https://localhost:5001/api/Events", event, { headers });
+  }
+  
+  
+
   changePassword(newPassword:any){
     let head:any ={
       headers: new HttpHeaders({"Authorization":"Bearer "+this.token}),  

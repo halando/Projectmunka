@@ -11,6 +11,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { sadminGuard } from '../app/sadmin.guard';
 
+
+import { NewEventComponent } from './new-event/new-event.component';
 import { TicketComponent } from './additional-pages/ticket/ticket.component';
 import { VersenyekComponent } from './additional-pages/versenyek/versenyek.component';
 import { FishingShopComponent } from './additional-pages/fishing-shop/fishing-shop.component';
@@ -18,6 +20,7 @@ import { FishComponent } from './additional-pages/fish/fish.component';
 import { EventsComponent } from './additional-pages/events/events.component';
 import { AdditionalComponent } from './additional-pages/additional/additional.component';
 import { ErrorComponent } from './pages/error/error.component';
+
 
 
 
@@ -32,7 +35,10 @@ const routes: Routes = [
   {path:"profile/:id", component:ProfileComponent},
   {path:'user-list',component:UserListComponent,canActivate:[sadminGuard]},
   {path:'register', component:RegisterComponent},
+  {path:'events', component:EventsComponent},
 
+  {path:'newevent', component:NewEventComponent},
+  {path:"newevent/:id", component:NewEventComponent},
 
   {path:'ticket', component:TicketComponent},
   {path:'versenyek', component:VersenyekComponent},

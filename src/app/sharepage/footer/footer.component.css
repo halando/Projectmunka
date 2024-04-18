@@ -27,4 +27,27 @@ a:hover{
 img{
     height:50px;
     width: 50px;
+   
 }
+#facebook{
+    border-radius: 25px;
+    border: 5px solid black;
+    overflow: hidden;
+}
+
+#github{
+    border-radius: 30px;
+    border: 5px solid black;
+    overflow: hidden;
+}
+#suli{
+    border-radius: 20px;
+    border: 5px solid black;
+    overflow: hidden;
+}
+#gmail{
+    border-radius: 15px;
+}
+.col-lg-2 {
+    margin-bottom: 20px; 
+  }

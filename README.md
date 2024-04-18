@@ -11,7 +11,7 @@ Frontend start:
     -npm install,
     -ng serve -o
     
-Backend start: (Ne felejtsük el ha elakarjuk indítani háttértárolást, ahhoz kell egy backendapi is amit ezen a linken tudtok elérni)->https://github.com/halando/MheiBackendApi   
+Backend start: (Ne felejtsük el ha elakarjuk indítani háttértárolást, ahhoz kell egy backendapi is amit ezen a linken tudtok elérni)->https://github.com/halando/MheiBackendApi2   
 
 Electron:  Megvalósítottuk a célt, hogy meglévő Angular projektünket Electron asztali alkalmazássá alakítsuk át. Ezt a törekvést az a vágy motiválta, hogy kiterjesszük alkalmazásunk hatókörét az asztali felhasználókra, miközben kihasználjuk a megszokott webes fejlesztési stacket.
 

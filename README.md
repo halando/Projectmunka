@@ -21,10 +21,14 @@ npm run build,
 npm start,               
 npm run electron
 
+Letölthető formátumban az alkalmazás:
 
+MHEI Setup 1.0.0.exe
 
 
 Tesztelés dokumentációja: https://docs.google.com/document/d/1S6LiW8gd_1JYNAwAUQbp22aZ5bs9F33N2FV9PjihYVw/edit?usp=sharing
+
+A fejlesztői és a felhasználói dokumentáció a projekt gyökérkönyvtárában található.
 
 Frontend port: 4200,           
 Backend port: 5001

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule,HttpClient  } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ToastrModule } from 'ngx-toastr';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -98,7 +98,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     NgxSpinnerModule,
     ToastrModule.forRoot(),
   ],
-  providers: [HttpClient],
+  providers: [HttpClient,ToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

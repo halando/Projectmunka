@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class AuthService {
   private userSub= new BehaviorSubject(null)
   public SadminSub= new BehaviorSubject<boolean>(false)
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private toastr: ToastrService) { }
 
   logout(){
     this.token=""
@@ -49,14 +50,18 @@ export class AuthService {
   }
 
  
-  register(user:any){
-    this.http.post(this.url+"Authentication/register",user)
-    .subscribe(
-      {
-        next:()=>console.log("Sikeres Reg"),
-        error:()=>console.log("Sikertelen  Regisztráció")
-      }
-    )
+  register(user: any) {
+    this.http.post(this.url + "Authentication/register", user)
+      .subscribe({
+        next: () => {
+          console.log("Sikeres Reg");
+          this.toastr.success('Sikeres regisztráció!');
+        },
+        error: () => {
+          console.log("Sikertelen Regisztráció");
+          this.toastr.error('Sikertelen regisztráció!');
+        }
+      });
   }
  
   update(user:any){
@@ -176,31 +181,31 @@ export class AuthService {
   }
 
 
-  login(user:any){
-    this.http.post(this.url+"Authentication/login",user)
-    .subscribe(
-      {
-        next:(res:any)=>
-        {
-          this.token=res.token
-          this.user=res.user
-          this.user.token=res.token
-          console.log("Sikeres Login", this.token)
+  login(user: any) {
+    this.http.post(this.url + "Authentication/login", user)
+      .subscribe({
+        next: (res: any) => {
+          this.token = res.token;
+          this.user = res.user;
+          this.user.token = res.token;
+          console.log("Sikeres Login", this.token);
+          this.toastr.success('Sikeres belépés!');
           this.getClaims(this.user.id).subscribe(
-            (claims)=> {
-              if (!claims) claims=[]
-              this.user.claims=claims
-              this.SadminSub.next(this.user.claims.includes('SAdmin'))
-              this.userSub.next(this.user)
+            (claims) => {
+              if (!claims) claims = [];
+              this.user.claims = claims;
+              this.SadminSub.next(this.user.claims.includes('SAdmin'));
+              this.userSub.next(this.user);
             }
-
-          )
+          );
         },
-        error:()=>console.log("Sikertelen  Belépés")
-      }
-    )
+        error: () => {
+          console.log("Sikertelen Belépés");
+          this.toastr.error('Sikertelen belépés!');
+        }
+      });
   }
-
-
-
 }
+
+
+

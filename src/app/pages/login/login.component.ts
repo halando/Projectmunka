@@ -18,8 +18,8 @@ export class LoginComponent {
   
   login(){
       this.auth.login(this.loginModel)
-      this.toastr.success('Sikeres Bejelentkezés!')
-      this.router.navigate(['fooldal']);
+    
+    
   }
   openSpinner(){
     this.spinner.show();

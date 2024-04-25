@@ -39,10 +39,15 @@ h5{
     font-weight: bold;
 }
 a{
+    display: inline-block;
     background-color: gray;
     color: whitesmoke;
     border: 5px solid black;
-    overflow: hidden;
-    border-radius: 20px;
     font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+p{
+    height: 20px;
 }

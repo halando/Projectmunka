@@ -18,7 +18,6 @@ export class RegisterComponent {
   register(){
    
      this.auth.register(this.regModel)
-     this.toastr.success('Köszönjük hogy regisztráltál!')
      this.router.navigate(['']);
    }
    viewpass(){

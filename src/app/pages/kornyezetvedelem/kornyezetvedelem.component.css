@@ -22,7 +22,7 @@
     height: 250px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid black;
+    border: 2px solid black;
     margin-right: auto;
     margin-left: 0;
     display: block;
@@ -32,7 +32,7 @@
 .szovegdoboz{
     display: inline-block;
     background-color: orange;
-    border: 5px solid black;
+    border: 2px solid black;
     border-radius: 20px;
     font-weight: bold;
     width:50%;
@@ -69,7 +69,7 @@
     height: 250px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid black;
+    border: 2px solid black;
     margin-right: 250px;
     margin-left: 0;
     display: block;
@@ -83,7 +83,7 @@
     height: 250px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid black;
+    border: 2px solid black;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -94,7 +94,7 @@
     float: right;
     display: block;
     background-color: orange;
-    border: 5px solid black;
+    border: 2px solid black;
     border-radius: 20px;
     font-weight: bold;
     position: absolute;

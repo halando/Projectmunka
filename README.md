@@ -22,7 +22,9 @@ npm start,
 npm run electron
 
 
-Felhasznált képek,források a projekt dokumentációjában található.
+Felhasznált képek,források a projekt dokumentációjában található: https://docs.google.com/document/d/16OdPVi1QQBd7N7NKthDFdiBIVVc7HLj-lqGGMAbkHbY/edit?usp=sharing
+
+Tesztelés dokumentációja: https://docs.google.com/document/d/1S6LiW8gd_1JYNAwAUQbp22aZ5bs9F33N2FV9PjihYVw/edit?usp=sharing
 
 Frontend port: 4200,           
 Backend port: 5001

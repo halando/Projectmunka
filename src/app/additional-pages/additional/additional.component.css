@@ -40,3 +40,62 @@ img {
   border: 5px solid black;
   border-radius: 20px;
 }
+
+
+@media (min-width: 768px) {
+
+  #button1, #button2, #button3, #button4 {
+
+    float: right;
+
+    margin-right: 20px;
+
+  }
+
+
+  img {
+
+    max-width: 400px;
+
+  }
+
+}
+
+
+@media (min-width: 992px) {
+
+  #button1 {
+
+    margin-right: -120px;
+
+  }
+
+
+  #button2 {
+
+    margin-right: -170px;
+
+  }
+
+
+  #button3 {
+
+    margin-right: -150px;
+
+  }
+
+
+  #button4 {
+
+    margin-right: -170px;
+
+  }
+
+
+  img {
+
+    max-width: 500px;
+
+  }
+
+}

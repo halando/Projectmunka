@@ -85,3 +85,57 @@ a{
     color: black;
 }
 
+@media (max-width: 1200px) {
+
+    .card {
+   
+       width: 80%;
+   
+     }
+   
+   }
+   
+   
+   @media (max-width: 992px) {
+   
+    .card {
+   
+       width: 70%;
+   
+     }
+   
+   }
+   
+   
+   @media (max-width: 768px) {
+   
+    .card {
+   
+       width: 90%;
+   
+     }
+   
+     #engedely {
+   
+       width: 80%;
+   
+     }
+   
+   }
+   
+   
+   @media (max-width: 480px) {
+   
+    .card {
+   
+       width: 100%;
+   
+     }
+   
+     #engedely {
+   
+       width: 90%;
+   
+     }
+   
+   }

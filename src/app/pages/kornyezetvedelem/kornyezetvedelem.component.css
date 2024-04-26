@@ -57,7 +57,6 @@
 
 }
 */
-
 .szovegdoboz h1 {
     font-weight: bold;
 }
@@ -106,4 +105,81 @@ h1{
     text-align: center;
     text-decoration: underline;
     
+}
+
+
+
+
+@media (max-width: 991px) {
+
+    .hero {
+
+        min-width: 0;
+
+    }
+
+
+    .szovegdoboz {
+
+        width: 100%;
+
+        top: 0;
+
+    }
+
+
+    #img2 {
+
+        margin-right: 0;
+
+    }
+
+
+    .szovegdoboz2 {
+
+        width: 100%;
+
+        bottom: 0;
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .hero {
+
+        height: auto;
+
+    }
+
+
+    #img1,
+
+    #img2,
+
+    #img3 {
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+
+    .szovegdoboz,
+
+    .szovegdoboz2 {
+
+        width: 100%;
+
+        position: relative;
+
+        top: 0;
+
+        bottom: 0;
+
+    }
+
 }

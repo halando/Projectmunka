@@ -66,3 +66,99 @@ h1{
     width: 50%;
     margin-left: 420px;
 }
+
+@media (max-width: 768px) {
+
+    .hero {
+  
+      padding: 0 20px;
+  
+    }
+  
+  
+    .menu-item,
+  
+    .menu-item2 {
+  
+      width: 100%;
+  
+      margin-left: 0;
+  
+    }
+  
+  
+    #jegyek,
+  
+    #kiegeszitok,
+  
+    #horgaszboltok,
+  
+    #halfajok,
+  
+    #esemenyek,
+  
+    #versenyek {
+  
+      margin-left: 0;
+  
+    }
+  
+  
+    h1 {
+  
+      width: 100%;
+  
+      margin: 20px auto;
+  
+    }
+  
+  }
+
+  @media (max-width: 1024px) {
+
+    .hero {
+  
+      padding: 0 20px;
+  
+    }
+  
+  
+    .menu-item,
+  
+    .menu-item2 {
+  
+      width: 100%;
+  
+      margin-left: 0;
+  
+    }
+  
+  
+    #jegyek,
+  
+    #kiegeszitok,
+  
+    #horgaszboltok,
+  
+    #halfajok,
+  
+    #esemenyek,
+  
+    #versenyek {
+  
+      margin-left: 0;
+  
+    }
+  
+  
+    h1 {
+  
+      width: 100%;
+  
+      margin: 20px auto;
+  
+    }
+  
+  }
+
+  

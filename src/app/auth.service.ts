@@ -2,60 +2,62 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  url="https://localhost:5001/api/"
-  private token=""
-  private user:any={}
-  private event:any={}
-  private userSub= new BehaviorSubject(null)
-  public SadminSub= new BehaviorSubject<boolean>(false)
+  url = "https://localhost:5001/api/"
+  private token = ""
+  private user: any = {}
+  private event: any = {}
+  private userSub = new BehaviorSubject(null)
+  public SadminSub = new BehaviorSubject<boolean>(false)
 
-  constructor(private http:HttpClient,private toastr: ToastrService) { }
+  constructor(private http: HttpClient, private toastr: ToastrService, private router: Router) { }
 
-  logout(){
-    this.token=""
-    this.user=null
+  logout() {
+    this.token = ""
+    this.user = null
     this.SadminSub.next(false)
     this.userSub.next(null)
   }
 
-  getCurrentUser(){
+  getCurrentUser() {
     return this.userSub
   }
 
-  getUser(id:any){
-    let headers= new HttpHeaders().set("Authorization","Bearer "+this.token)
-    return this.http.get(this.url+"user/"+id, {headers:headers})
-  }
- 
-
-  getUsers(){
-    let headers= new HttpHeaders().set("Authorization","Bearer "+this.token)
-    return this.http.get(this.url+"userlist", {headers:headers})
+  getUser(id: any) {
+    let headers = new HttpHeaders().set("Authorization", "Bearer " + this.token)
+    return this.http.get(this.url + "user/" + id, { headers: headers })
   }
 
-  getClaims(id:any){
-    let headers= new HttpHeaders().set("Authorization","Bearer "+this.token)
-    return this.http.get(this.url+"userClaims/"+id, {headers:headers})
-  }
-  setClaims(id:any, claims:any){
-    let body={id:id, roles:claims}
-    let headers= new HttpHeaders().set("Authorization","Bearer "+this.token)
-    return this.http.post(this.url+"userClaims/",body, {headers:headers})
+
+  getUsers() {
+    let headers = new HttpHeaders().set("Authorization", "Bearer " + this.token)
+    return this.http.get(this.url + "userlist", { headers: headers })
   }
 
- 
+  getClaims(id: any) {
+    let headers = new HttpHeaders().set("Authorization", "Bearer " + this.token)
+    return this.http.get(this.url + "userClaims/" + id, { headers: headers })
+  }
+  setClaims(id: any, claims: any) {
+    let body = { id: id, roles: claims }
+    let headers = new HttpHeaders().set("Authorization", "Bearer " + this.token)
+    return this.http.post(this.url + "userClaims/", body, { headers: headers })
+  }
+
+
   register(user: any) {
     this.http.post(this.url + "Authentication/register", user)
       .subscribe({
         next: () => {
           console.log("Sikeres Reg");
           this.toastr.success('Sikeres regisztráció!');
+          this.router.navigate(['']);
         },
         error: () => {
           console.log("Sikertelen Regisztráció");
@@ -63,75 +65,75 @@ export class AuthService {
         }
       });
   }
- 
-  update(user:any){
-    console.log("update",user)
-    let head:any ={
-      headers: new HttpHeaders().set("Authorization","Bearer "+this.token),
-      'responseType':'text'
-    }
-    return this.http.put("https://localhost:5001/api/user/"+user.id,user, head)
-    
-    
-  }
-  delete(user:any){
-    console.log("delete",user)
-     let head:any ={
-       headers: new HttpHeaders().set("Authorization","Bearer "+this.token),
-       'responseType':'text'
-     }
-     return this.http.delete("https://localhost:5001/api/user/"+user.id, head)
-     
-     
-   }
 
-   eventdelete(event: any) {
-    console.log("delete", event);
-    const head:any = {
-      headers: new HttpHeaders().set("Authorization","Bearer "+this.token)  
-      
-    };
-    const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
-  
-    return this.http.delete(`https://localhost:5001/api/Events/`+event.id, { headers });
-  
+  update(user: any) {
+    console.log("update", user)
+    let head: any = {
+      headers: new HttpHeaders().set("Authorization", "Bearer " + this.token),
+      'responseType': 'text'
+    }
+    return this.http.put("https://localhost:5001/api/user/" + user.id, user, head)
+
+
   }
-  
-  getEvents() {
-   
-    const head:any = {
-      headers: new HttpHeaders().set("Authorization","Bearer "+this.token),   
-      
+  delete(user: any) {
+    console.log("delete", user)
+    let head: any = {
+      headers: new HttpHeaders().set("Authorization", "Bearer " + this.token),
+      'responseType': 'text'
+    }
+    return this.http.delete("https://localhost:5001/api/user/" + user.id, head)
+
+
+  }
+
+  eventdelete(event: any) {
+    console.log("delete", event);
+    const head: any = {
+      headers: new HttpHeaders().set("Authorization", "Bearer " + this.token)
+
     };
     const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
-  
+
+    return this.http.delete(`https://localhost:5001/api/Events/` + event.id, { headers });
+
+  }
+
+  getEvents() {
+
+    const head: any = {
+      headers: new HttpHeaders().set("Authorization", "Bearer " + this.token),
+
+    };
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+
     return this.http.get(`https://localhost:5001/api/Events`, { headers });
   }
-  
-  getEvent(id:any) {
-   
-    const head:any = {
-      headers: new HttpHeaders().set("Authorization","Bearer "+this.token),   
-      
+
+  getEvent(id: any) {
+
+    const head: any = {
+      headers: new HttpHeaders().set("Authorization", "Bearer " + this.token),
+
     };
     const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
-  
-    return this.http.get(`https://localhost:5001/api/Events/`+id, { headers });
+
+    return this.http.get(`https://localhost:5001/api/Events/` + id, { headers });
   }
-  putEvent(event:any) {
-   
-    const head:any = {
-      headers: new HttpHeaders().set("Authorization","Bearer "+this.token),   
-      
+  putEvent(event: any) {
+
+    const head: any = {
+      headers: new HttpHeaders().set("Authorization", "Bearer " + this.token),
+
     };
     const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
     console.log("Put: ", event)
-    return this.http.put(`https://localhost:5001/api/Events/`+event.id,event, { headers });
+    return this.http.put(`https://localhost:5001/api/Events/` + event.id, event, { headers });
   }
-  
-  
-  
-  eventadd(event: any){
+
+
+
+  eventadd(event: any) {
     console.log("add", event);
     // const body = {
     //   id: event.id,
@@ -140,44 +142,44 @@ export class AuthService {
     //   description: event.description,
     //   imagePath: null, 
     //   link: event.link
-      
+
     // };
-    event.userId = this.user.id          
-  
+    event.userId = this.user.id
+
     const headers = new HttpHeaders().set("Authorization", "Bearer " + this.token);
     return this.http.post("https://localhost:5001/api/Events", event, { headers });
   }
-  
-  
 
-  changePassword(newPassword:any){
-    let head:any ={
-      headers: new HttpHeaders({"Authorization":"Bearer "+this.token}),  
-      'responseType':'text'
+
+
+  changePassword(newPassword: any) {
+    let head: any = {
+      headers: new HttpHeaders({ "Authorization": "Bearer " + this.token }),
+      'responseType': 'text'
     }
     console.log(newPassword)
-    this.http.post("https://localhost:5001/api/Authentication/change",newPassword, head)
-    .subscribe(
-      {
-        next:()=>console.log("Sikeres Jelszóvált"),
-        error:()=>console.log("Sikertelen Jelszóvált")
-      }
-    )
+    this.http.post("https://localhost:5001/api/Authentication/change", newPassword, head)
+      .subscribe(
+        {
+          next: () => console.log("Sikeres Jelszóvált"),
+          error: () => console.log("Sikertelen Jelszóvált")
+        }
+      )
   }
-  changeMyPassword(newPassword:any){
-    let head:any ={
-      headers: new HttpHeaders({"Authorization":"Bearer "+this.token}),  
-      'responseType':'text'
+  changeMyPassword(newPassword: any) {
+    let head: any = {
+      headers: new HttpHeaders({ "Authorization": "Bearer " + this.token }),
+      'responseType': 'text'
     }
     console.log(newPassword)
-    
-    this.http.put("https://localhost:5001/api/user/changeMyPassword/",newPassword, head)
-    .subscribe(
-      {
-        next:()=>console.log("Sikeres Jelszóvált"),
-        error:()=>console.log("Sikertelen Jelszóvált")
-      }
-    )
+
+    this.http.put("https://localhost:5001/api/user/changeMyPassword/", newPassword, head)
+      .subscribe(
+        {
+          next: () => console.log("Sikeres Jelszóvált"),
+          error: () => console.log("Sikertelen Jelszóvált")
+        }
+      )
   }
 
 
@@ -196,6 +198,7 @@ export class AuthService {
               this.user.claims = claims;
               this.SadminSub.next(this.user.claims.includes('SAdmin'));
               this.userSub.next(this.user);
+              this.router.navigate(['/fooldal']);
             }
           );
         },

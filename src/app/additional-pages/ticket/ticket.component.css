@@ -85,57 +85,39 @@ a{
     color: black;
 }
 
-@media (max-width: 1200px) {
+   
 
+  
+  @media (min-width: 768px) {
+    .hero {
+      flex-wrap: wrap;
+    }
+  
     .card {
-   
-       width: 80%;
-   
-     }
-   
-   }
-   
-   
-   @media (max-width: 992px) {
-   
+      flex: 1 0 450px;
+      margin: 10px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .hero {
+      justify-content: space-around;
+    }
+  
     .card {
-   
-       width: 70%;
-   
-     }
-   
-   }
-   
-   
-   @media (max-width: 768px) {
-   
+      flex: 1 0 300px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .hero {
+      justify-content: center;
+    }
+  
     .card {
+      flex: 1 0 450px;
+    }
+  }
    
-       width: 90%;
+ 
    
-     }
-   
-     #engedely {
-   
-       width: 80%;
-   
-     }
-   
-   }
-   
-   
-   @media (max-width: 480px) {
-   
-    .card {
-   
-       width: 100%;
-   
-     }
-   
-     #engedely {
-   
-       width: 90%;
-   
-     }
-   
-   }

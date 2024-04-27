@@ -18,7 +18,7 @@ export class RegisterComponent {
   register(){
    
      this.auth.register(this.regModel)
-     this.router.navigate(['']);
+    
    }
    viewpass(){
     this.visible = !this.visible;

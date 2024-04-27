@@ -103,3 +103,51 @@ h3 {
   border-radius: 20px;
   
 }
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+
+  .horgaszbolt1,
+  .horgaszbolt2,
+  .horgaszbolt3 {
+    height: auto;
+  }
+
+  .map-container {
+    height: 200px;
+    
+  }
+
+  .map-container img {
+    max-width: 100%;
+    height: auto;
+    width: auto; 
+    margin-top: -5500px;
+  }
+
+  .img-container img {
+    height: 120px;
+    width: 120px;
+  }
+  #maps2 {
+    width: 280px; 
+    height: 150px; 
+    margin-top: 250px;
+    margin-right: 125px;
+  }
+  #maps1 {
+    width: 280px; 
+    height: 150px; 
+    margin-top: 250px;
+    margin-right: 125px;
+  }
+  #maps3 {
+    width: 280px; 
+    height: 150px; 
+    margin-top: 250px;
+    margin-right: 125px;
+  }
+}
+

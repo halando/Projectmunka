@@ -14,8 +14,19 @@
           <li class="nav-item">
             <a class="nav-link active" routerLink="fooldal" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" (click)="openSpinner()">{{'home2'| translate}}</a>
           </li>
-          <li  *ngIf="currentUser" class="nav-item">
-            <a class="nav-link" routerLink="jegy"  routerLinkActive="active-link" (click)="openSpinner()">{{'services'|translate}}</a>
+          <li *ngIf="currentUser" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{'services'|translate}}
+            </a>
+            <ul class="dropdown-menu" href="#" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="/ticket">{{'tickets'|translate}}</a></li>
+              <li><a class="dropdown-item" routerLink="/additional">{{'additional'|translate}}</a></li>
+              <li><a class="dropdown-item" routerLink="/events">{{'events'|translate}}</a></li>
+              <li><a class="dropdown-item" routerLink="/fish">{{'fishSpecies'|translate}}</a></li>
+              <li><a class="dropdown-item" routerLink="/fishing-shop">{{'fishingShops'|translate}}</a></li>
+              <li><a class="dropdown-item" routerLink="/versenyek">{{'competitions'|translate}}</a></li>
+            </ul>
+            
           </li>
           <li *ngIf="currentUser" class="nav-item">
             <a class="nav-link" routerLink="kornyezetvedelem" routerLinkActive="active-link" (click)="openSpinner()">{{'environment2'|translate}}</a>

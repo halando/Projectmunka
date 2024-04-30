@@ -16,6 +16,7 @@ export class KapcsolatComponent {
 
   sendMail(){
     this.mail.sendMail(this.mail,this.message);
+    console.log(this.mail,this.message);
   }
  
 }
